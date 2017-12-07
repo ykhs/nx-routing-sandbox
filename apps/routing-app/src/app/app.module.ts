@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NxModule } from '@nrwl/nx';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { AppModule as aAppModule } from '../../../a-app/src/app/app.module';
 
 const routes: Routes = [
   { path: '', component: HomeComponent }
@@ -13,7 +14,8 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     NxModule.forRoot(),
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    aAppModule
   ],
   declarations: [AppComponent, HomeComponent],
   bootstrap: [AppComponent]
