@@ -4,9 +4,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 
-export const routes: Routes = [
+const routes: Routes = [
   {
-    path: '',
+    path: 'b',
     component: AppComponent,
     children: [
       {
@@ -20,7 +20,7 @@ export const routes: Routes = [
 @NgModule({
   imports: [
     BrowserModule,
-    RouterModule
+    RouterModule.forChild(routes)
   ],
   declarations: [AppComponent, HomeComponent],
   bootstrap: [AppComponent]

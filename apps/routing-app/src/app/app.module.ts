@@ -5,14 +5,12 @@ import { NxModule } from '@nrwl/nx';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { AppModule as aAppModule } from '../../../a-app/src/app/app.module';
-import {
-  routes as bAppRoutes,
-  AppModule as bAppModule
-} from '../../../b-app/src/app/app.module'
+import { AppModule as bAppModule } from '../../../b-app/src/app/app.module'
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'b', children: bAppRoutes }
+  { path: 'a', loadChildren: '../../../a-app/src/app/app.module#AppModule' },
+  { path: 'b', loadChildren: '../../../b-app/src/app/app.module#AppModule' }
 ];
 
 @NgModule({
