@@ -7,6 +7,31 @@
   },
   "apps": [
     {
+      "name": "routing-app",
+      "root": "apps/routing-app/src",
+      "outDir": "dist/apps/routing-app",
+      "assets": [
+        "assets",
+        "favicon.ico"
+      ],
+      "index": "index.html",
+      "main": "main.ts",
+      "polyfills": "polyfills.ts",
+      "test": "../../../test.js",
+      "tsconfig": "../../../tsconfig.app.json",
+      "testTsconfig": "../../../tsconfig.spec.json",
+      "prefix": "app",
+      "styles": [
+        "styles.css"
+      ],
+      "scripts": [],
+      "environmentSource": "environments/environment.ts",
+      "environments": {
+        "dev": "environments/environment.ts",
+        "prod": "environments/environment.prod.ts"
+      }
+    },
+    {
       "name": "a-app",
       "root": "apps/a-app/src",
       "outDir": "dist/apps/a-app",
@@ -35,31 +60,6 @@
       "name": "b-app",
       "root": "apps/b-app/src",
       "outDir": "dist/apps/b-app",
-      "assets": [
-        "assets",
-        "favicon.ico"
-      ],
-      "index": "index.html",
-      "main": "main.ts",
-      "polyfills": "polyfills.ts",
-      "test": "../../../test.js",
-      "tsconfig": "../../../tsconfig.app.json",
-      "testTsconfig": "../../../tsconfig.spec.json",
-      "prefix": "app",
-      "styles": [
-        "styles.css"
-      ],
-      "scripts": [],
-      "environmentSource": "environments/environment.ts",
-      "environments": {
-        "dev": "environments/environment.ts",
-        "prod": "environments/environment.prod.ts"
-      }
-    },
-    {
-      "name": "routing-app",
-      "root": "apps/routing-app/src",
-      "outDir": "dist/apps/routing-app",
       "assets": [
         "assets",
         "favicon.ico"
