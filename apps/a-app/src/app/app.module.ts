@@ -22,7 +22,6 @@ const routes: Routes = [
     BrowserModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [AppComponent, HomeComponent],
-  bootstrap: [AppComponent]
+  declarations: [AppComponent, HomeComponent]
 })
 export class AppModule { }
