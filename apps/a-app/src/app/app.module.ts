@@ -1,27 +1,18 @@
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   {
-    path: 'a',
-    component: AppComponent,
-    children: [
-      {
-        path: '',
-        component: HomeComponent
-      }
-    ]
+    path: '',
+    component: AppComponent
   }
 ];
 
 @NgModule({
   imports: [
-    BrowserModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [AppComponent, HomeComponent]
+  declarations: [AppComponent]
 })
 export class AppModule { }
