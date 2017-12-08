@@ -7,8 +7,8 @@ import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'a', loadChildren: '../../../a-app/src/app/app.module#AppModule' },
-  { path: 'b', loadChildren: '../../../b-app/src/app/app.module#AppModule' }
+  { path: 'a', loadChildren: '@nx-routing-sandbox/a#AModule' },
+  { path: 'b', loadChildren: '@nx-routing-sandbox/b#BModule' }
 ];
 
 @NgModule({
