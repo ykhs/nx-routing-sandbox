@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app/app.component';
 
-const routes: Routes = [
+export const bRoutes: Routes = [
   {
     path: '',
     component: AppComponent
@@ -13,7 +13,7 @@ const routes: Routes = [
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    RouterModule
   ],
   declarations: [AppComponent]
 })

@@ -1,1 +1,1 @@
-export { BModule } from './src/b.module';
+export { BModule, bRoutes } from './src/b.module';

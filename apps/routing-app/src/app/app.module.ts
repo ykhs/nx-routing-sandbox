@@ -4,10 +4,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NxModule } from '@nrwl/nx';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { AModule, aRoutes } from '@nx-routing-sandbox/a';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'a', loadChildren: '@nx-routing-sandbox/a#AModule' },
+  { path: 'a', children: aRoutes },
   { path: 'b', loadChildren: '@nx-routing-sandbox/b#BModule' }
 ];
 
@@ -15,7 +16,8 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     NxModule.forRoot(),
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    AModule
   ],
   declarations: [AppComponent, HomeComponent],
   bootstrap: [AppComponent]

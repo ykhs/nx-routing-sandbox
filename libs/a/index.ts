@@ -1,1 +1,1 @@
-export { AModule } from './src/a.module';
+export { AModule, aRoutes } from './src/a.module';
